@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: imp-prov
+# key: imp-prov
+# --
+import PROV from '@commons/provices/'

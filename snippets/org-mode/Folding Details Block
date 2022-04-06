@@ -1,0 +1,7 @@
+# key: xdetail
+# name: Folding Details Block
+# --
+#+html: <br>
+#+begin_details $1 :title-color $2
+$3
+#+end_details

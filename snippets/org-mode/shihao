@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: shihao
+# key: shihao
+# --
+
+#+begin_export html
+<kbd>
+<font color="blue" size="3" style="font-family: 'ZCOOL XiaoWei', serif;">
+诗号：$1
+</font>
+</kbd><br><br>
+#+end_export

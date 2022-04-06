@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: xblock
+# key: xblock
+# --
+#+begin_$1
+#+end_$1

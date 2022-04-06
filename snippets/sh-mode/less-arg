@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: less-arg
+# key: lessarg
+# --
+    bin=$\{0##*/\}
+
+    error_less_arg
+
+    color_info "
+> $1： $bin <name>
+
+  1. $bin $2, $3
+"

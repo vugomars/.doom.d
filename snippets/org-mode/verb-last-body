@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: verb-last-body
+# key: verb-last-body
+# --
+{{(verb-json-get (oref verb-last body) "$1")}}

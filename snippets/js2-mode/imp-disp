@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: imp-disp
+# key: imp-disp
+# --
+import dispatch from '@commons/actions/dispatch'

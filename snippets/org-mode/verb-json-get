@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: verb-get-json
+# key: verb-get-json
+# --
+{{(verb-json-get (oref (verb-stored-response "$1") body) "$2")}}

@@ -1,0 +1,52 @@
+# key: vuecc
+# name: vue-compiler-core
+# --
+const url = process.env.VNEXT_PKG_RC +'/../compiler-core/dist/compiler-core.cjs.js'
+const value = require(url.replace('stb-', ''))
+const { generate, createSimpleExpression, locStub,
+        createVNodeCall, createObjectExpression,
+        createCompoundExpression,
+        createObjectProperty,
+        createArrayExpression
+      } = value
+
+function createRoot(options) {
+  return {
+    type: 0/* ROOT */,
+    children: [],
+    helpers: [],
+    components: [],
+    directives: [],
+    imports: [],
+    hoists: [],
+    cached: 0,
+    temps: 0,
+    codegenNode: createSimpleExpression(`null`, false),
+    loc: locStub,
+    ...options
+  }
+}
+
+function genCode(node) {
+  return generate(
+    createRoot({
+      codegenNode: node
+    })
+  ).code.match(/with \(_ctx\) \{\s+([^]+)\s+\}\s+\}$/)[1]
+}
+
+const mockChildren = createCompoundExpression(['children'])
+const mockDirs = createArrayExpression([
+  createArrayExpression([`foo`, createSimpleExpression(`bar`, false)])
+])
+
+const mockProps = createObjectExpression([
+  createObjectProperty(`foo`, createSimpleExpression(`bar`, true))
+])
+
+const test = (title, ...args) =>
+  console.log('> ' + title + '\n', "'" + genCode(createVNodeCall(...args)) + "'")
+
+$1
+test('with props', null, '"div"')
+return 0

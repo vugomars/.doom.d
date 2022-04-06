@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: i-html-frame
+# key: i-html-frame
+# --
+#+begin_export html
+<script>
+insertFrame('', '$1.js', '$2/js/vue/router/')
+</script>
+#+end_export

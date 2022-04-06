@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# name: vue-sfc
+# key: vuesfc
+# --
+const url =
+      process.env.VNEXT_PKG_RC + "/../compiler-sfc/dist/compiler-sfc.cjs.js";
+const value = require(url.replace("stb-", ""));
+const { compileScript, parse } = value;
+
+function compileSFCScript(src, options) {
+  const { descriptor } = parse(src)
+  return compileScript(descriptor, {
+    ...options,
+    id: 'xxxxxxx'
+  })
+}
+
+function compileWithRefSugar(src) {
+  return compileSFCScript(src, { refSugar: true })
+}
+
+const _ = (title, src) => {
+  const { content } = compileWithRefSugar(src)
+  console.log(title, '\n', content)
+}
+
+$1

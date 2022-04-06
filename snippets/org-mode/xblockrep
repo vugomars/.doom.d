@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: xblockrep
+# key: xblockrep
+# --
+#+begin_stutter $1
+$2
+#+end_stutter

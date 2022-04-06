@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: async-function
+# key: afn
+# --
+export async function $1($2) {
+  $3
+}

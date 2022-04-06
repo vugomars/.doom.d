@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ijsxtable
+# key: ijsxtable
+# --
+import $1 from '@/components/tables/$1'

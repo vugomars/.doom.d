@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: verb
+# key: 1vb
+# --
+#+begin_src verb :wrap src ob-verb-response
+$1
+#+end_src

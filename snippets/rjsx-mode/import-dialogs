@@ -1,0 +1,4 @@
+# key: idialog
+# name: import-dialogs
+# --
+import $1 from '@/components/dialogs/$1'

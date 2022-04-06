@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: color-yellow
+# key: cyellow
+# --
+\033[0;33m$1\033[0m

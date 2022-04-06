@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: vue-pkg-rt
+# key: vuepkgrt
+# --
+const url = process.env.VNEXT_PKG_RC +'/../runtime-test/dist/runtime-test.cjs.js'
+const value = require(url.replace('stb-', ''))
+const { nodeOps, render, h, serializeInner: s } = value

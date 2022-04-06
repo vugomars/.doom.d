@@ -1,0 +1,24 @@
+# -*- mode: snippet -*-
+# name: vue-sfc-compile-style
+# key: vuesfcstyle
+# --
+const url =
+      process.env.VNEXT_PKG_RC + "/../compiler-sfc/dist/compiler-sfc.cjs.js";
+const value = require(url.replace("stb-", ""));
+const { compileScript, parse, compileStyle } = value;
+
+function compileScoped(source, options) {
+  const res = compileStyle({
+    source,
+    filename: 'test.css',
+    id: 'data-v-test',
+    scoped: true,
+    ...options
+  })
+  return res.code
+}
+
+const src = `...$1`
+const code = compileScoped(src)
+console.log(code)
+return 0;

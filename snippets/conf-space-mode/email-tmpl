@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name: email-tmpl
+# key: etmpl
+# --
+# SUNLIGHT ================================================================================
+
+# ACCOUNT INFORMATION
+IMAPAccount $1
+# Address to connect to
+Host imap.$2.com
+User simon.li@sunlight-tech$3.com
+PassCmd "gpg -q --for-your-eyes-only --no-tty -d ~/.gclrc/mu4e/mbsyncpass-$1.gpg"
+AuthMechs LOGIN
+SSLType IMAPS
+SSLVersions TLSv1.2
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# REMOTE
+IMAPStore $1-remote
+Account $1
+
+# LOCLA
+MaildirStore $1-local
+Path ~/Mail/$1
+Inbox ~/Mail/$1/INBOX
+
+Channel $1
+Master :$1-remote:
+Slave :$1-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *

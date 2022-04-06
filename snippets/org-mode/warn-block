@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: warn-block
+# key: 1iw
+# --
+#+begin_warn
+@@html:<p><strong>WARNING</strong></p>@@
+
+$2
+#+end_warn

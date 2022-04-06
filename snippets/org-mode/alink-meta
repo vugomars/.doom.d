@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: alink-meta
+# key: alinkmeta
+# --
+@@html:<span id="$1"></span>@@

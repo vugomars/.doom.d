@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: xhome
+# key: xhome
+# --
+<badge: GCCLL | Homepage | green | / | gnu-emacs>

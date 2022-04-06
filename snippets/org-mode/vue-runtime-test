@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: runtime-test
+# key: runtime-test
+# --
+const { log, f, runtime_test } = require(process.env.BLOG_DIR_VUE + '/lib.js')
+import(process.env.BLOG_DIR_VUE + "/$1.global.js").then(
+  ({ h, render, nodeOps, serializeInner: inner }) => {
+    $2
+  },
+  (err) => {
+    console.log(err.message);
+  }
+);

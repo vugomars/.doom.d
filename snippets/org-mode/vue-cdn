@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: vue-cdn
+# key: vuecdn
+# --
+https://unpkg.com/vue@$1/dist/vue.$2.js

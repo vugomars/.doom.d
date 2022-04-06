@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: colortext
+# key: 1icolor
+# condition: t
+# --
+@@html:<font color="$1">$2</font>@@

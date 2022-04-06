@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: orgsetup
+# key: orgsetup
+# --
+#+SETUPFILE: ~/github/mine/org-html-themes/org/theme-readtheorg.setup

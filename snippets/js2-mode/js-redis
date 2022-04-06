@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: js-redis
+# key: js-redis
+# --
+import { pull } from '@commons/cache'
+import { run } from './run'
+
+export default {
+  run() {
+    pull(run)
+  }
+}

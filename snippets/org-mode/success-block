@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: success-block
+# key: 1is
+# --
+#+begin_success
+@@html:<p><strong>Success</strong></p>@@
+
+$2
+#+end_success

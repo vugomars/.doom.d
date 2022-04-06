@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: verb-last-header
+# key: verb-last-header
+# --
+(verb-headers-get (oref verb-last headers) "Content-Type$1")

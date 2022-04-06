@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: testvue
+# key: testvue
+# --
+(function() {
+  const {h, createApp, ref, reactive, defineComponent} = Vue
+  const {ElTable, ElTableColumn} = ElementPlus
+
+  $2
+  
+  createApp(Root).mount('$1')
+}())

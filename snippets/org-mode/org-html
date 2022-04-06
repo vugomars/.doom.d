@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: org-html
+# key: orghtml
+# --
+@@html:$1@@

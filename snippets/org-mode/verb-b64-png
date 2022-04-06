@@ -1,0 +1,53 @@
+# -*- mode: snippet -*-
+# name: verb-b64-png
+# key: basetopng
+# --
+
+** API2 convert :verb:
+
+template https://api2.online-convert.com
+x-oc-api-key: d89c39a23d8f41ca8fd13ef85297b9a7
+Cache-Control: no-cache
+
+[[https://www.api2convert.com/docs/getting_started/quickstart.html][api documents]]
+
+*** get id and server
+:properties:
+:Verb-Store: convert-response
+:end:
+
+post /jobs
+
+{
+    "conversion": [{
+        "category": "image",
+        "target": "png"
+    }]
+}
+
+*** base64 -> image
+:properties:
+:Verb-Store: image-response
+:end:
+
+POST {{(verb-json-get (oref (verb-stored-response "convert-response") body) "server")}}/upload-base64/{{(verb-json-get (oref (verb-stored-response "convert-response") body) "id")}}
+Content-Type: image/png
+
+{
+  "content": "data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=",
+  "filename": "black-pixel"
+}
+
+*** get the upload image
+
+POST /jobs
+
+{
+    "input": [{
+        "type": "input_id",
+        "source": "{{(verb-json-get (oref (verb-stored-response "image-response") body) "id" "input")}}"
+    }],
+    "conversion": [{
+        "target": "png"
+    }]
+}

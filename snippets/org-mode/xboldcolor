@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: xboldcolor
+# key: xboldcolor
+# --
+*<pink: $1>*

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: xicon
+# key: xicon
+# --
+octoicon:$1

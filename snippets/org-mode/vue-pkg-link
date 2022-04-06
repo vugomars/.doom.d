@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: vue-pkg-link
+# key: vuepl
+# --
+[[https://github.com/vuejs/vue-next/tree/master/packages/$1][$1]$2

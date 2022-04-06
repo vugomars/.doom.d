@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: vue-sfc-parse
+# key: vuesfcparse
+# --
+const url =
+      process.env.VNEXT_PKG_RC + "/../compiler-sfc/dist/compiler-sfc.cjs.js";
+const value = require(url.replace("stb-", ""));
+const { compileScript, parse } = value;
+
+const src = `...$1`
+const { descriptor } = parse(src)
+$2
+return 0;

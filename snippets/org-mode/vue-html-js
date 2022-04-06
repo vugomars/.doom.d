@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: vue-html-js
+# key: vuehtmljs
+# --
+#+begin_export html
+<div id="$1"></div>
+<script src="/js/vue/tests/$1.js"></script>
+#+end_export

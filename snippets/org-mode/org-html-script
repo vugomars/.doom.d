@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: org-html-script
+# key: org-html-script
+# --
+<div id="x$1"></div>
+<script>
+(function() {
+  $2
+}())
+</script>

@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: epg-release-sub
+# key: releasesub
+# --
+** $1
+
+*更新日期*: `(current-time-string)`
+
+*版本包路径*:
+
+@@html:<font color="blue">/usr/local/pkgs/EPG/EPG30/H5EPG30_$2</font>@@
+
+*遗留问题*: _描述遗留的未修复的问题，如果没有则不用写_
+
+*新增功能*: \*逐条罗列新增功能，如果没有则不用写
+
+*修复列表*: -
+$3

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: vue-teardown
+# key: vueteardown
+# --
+~/blog/cheng92.com/content/vue/vue-teardown-$1

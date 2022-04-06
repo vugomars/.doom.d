@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: danger-block
+# key: 1id
+# --
+#+begin_danger
+@@html:<p><strong>NOTE</strong></p>@@
+
+$2
+#+end_danger

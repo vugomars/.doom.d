@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: epg-request
+# key: epgreq
+# --
+import $1 from '@/commons/requests/$2'

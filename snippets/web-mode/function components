@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: function components
+# key: fnc
+# --
+export default function ${1:Name}(){
+       return (
+            <>
+               $0
+            </>
+       )
+}

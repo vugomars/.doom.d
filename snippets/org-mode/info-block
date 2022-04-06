@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: info-block
+# key: 1ii
+# --
+
+#+begin_info
+@@html:<p><strong>INFO</strong></p>@@
+
+$2
+#+end_info

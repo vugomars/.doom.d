@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: define-block
+# key: 1ib
+# condition: t
+# --
+#+begin_$1
+@@html:<p><strong>$1</strong></p>@@
+
+$2
+#+end_$1

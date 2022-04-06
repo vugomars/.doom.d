@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: colorful-text
+# key: 1ctxt
+# --
+#+begin_$1
+@@html:<font color="$1">$2</font>@@
+#+end_$1

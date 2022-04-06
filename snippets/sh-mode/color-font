@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: color-font
+# key: cfont
+# --
+\033[0;3$1m$2\033[0m

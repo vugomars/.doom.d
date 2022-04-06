@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: org-react
+# key: orgreact
+# --
+#+TITLE: React $1 - $2
+#+DATE: <2021-10-11 10:17:11>
+#+EMAIL: Lee ZhiCheng<gccll.love@gmail.com>
+#+TAGS[]: react, $3
+#+CATEGORIES[]: react
+#+LANGUAGE: zh-cn
+#+STARTUP: indent
+
+#+begin_export html
+<link href="https://fonts.goo~gleapis.com/cs~s2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+<kbd>
+<font color="blue" size="3" style="font-family: 'ZCOOL XiaoWei', serif;">
+  诗号：半神半圣亦半仙，全儒全道是全贤，脑中真书藏万卷，掌握文武半边天。
+</font>
+</kbd><br><br>
+<img  src="/img/bdx/shz-001.jpg"/>
+<script src="/js/utils.js"></script>
+#+end_export

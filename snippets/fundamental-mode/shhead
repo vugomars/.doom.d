@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: sh-head
+# key: shhead
+# --
+#!/usr/bin/env bash
+set -euo pipefail

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: xbadge
+# key: xbadge
+# --
+<badge: Emacs | is awesome | $1 | https://www.google.com/search?q=hello%20world | gnu-emacs>

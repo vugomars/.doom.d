@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: String to_owned()
+# key: So
+# --
+"$0".to_owned()

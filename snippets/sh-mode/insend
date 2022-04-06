@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: install-file-be
+# key: insfbe
+# --
+color_info "\n> Begin to execute $1."
+
+$2
+
+color_info "> ------ $1 DONE ------\n"

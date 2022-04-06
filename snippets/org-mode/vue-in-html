@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: vue-in-html
+# key: vueinhtml
+# --
+#+begin_export html
+<div id="$1"></div>
+<script class="$1">
+run_vue_tmpl("$1", "
+  $2
+")
+</script>
+#+end_export html

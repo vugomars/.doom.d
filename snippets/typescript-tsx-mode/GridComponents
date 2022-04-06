@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: Grid Components
+# key: gridcomponents
+# --
+
+import {FC, ReactNode} from 'react'
+
+const Grid: Fc<ReactNode> = ({children}) => {
+
+      return (
+        <div>
+            $0
+        </div>
+      )
+}
+
+export default Grid

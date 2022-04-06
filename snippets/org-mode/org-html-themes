@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: org-setup-themes
+# key: orgsetup
+# --
+#+SETUPFILE: ~/.gclrc/org/hugo_setup.org
+#+HTML_HEAD: <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+#+HTML_HEAD: <style>pre.src:before{border: 1px solid lightgray;color:black;}</style>
+#+HTML_HEAD: <style>pre.src{background:#343131;color:white;overflow-y:visible;}</style>
+#+HTML_HEAD: <style>div.success{padding:0.1rem 1.5rem;border-left-width:0.5rem;border-left-style:solid;margin:1rem 0;background-color:#f3f5f7;border-color:#42b983;color:#000000;}</style>

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: export-define-comp
+# key: tsxcomp
+# --
+export const $1 = defineComponent({
+  name: "$1",
+  setup() {
+    return <>$2</>
+  }
+})

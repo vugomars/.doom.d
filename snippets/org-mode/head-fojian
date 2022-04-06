@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: head-fojian
+# key: fojian
+# --
+<link href="https://fonts.goo~gleapis.com/cs~s2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+<kbd>
+<font color="blue" size="3" style="font-family: 'ZCOOL XiaoWei', serif;">
+  诗号：杀生为护生，斩业非斩人。
+</font>
+</kbd><br><br>
+<img src="/img/bdx/fojian.jpg"/>
+<script src="/js/utils.js"></script>

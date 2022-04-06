@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: xlinkhere
+# key: xlinkhere
+# --
+link-here:$1

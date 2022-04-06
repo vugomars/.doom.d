@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: source-file-shell
+# key: srcshell
+# --
+source $GCLRC_HOME/shell/$1

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: diffdiv
+# key: diffdiv
+# --
+<div id="visual"></div>
+<hr/>
+<div id="annotated"></div>

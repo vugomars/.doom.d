@@ -1,0 +1,39 @@
+# -*- mode: snippet -*-
+# name: imp-handler
+# key: ihandler
+# --
+/**
+ * @fileOverview
+ * @name handler.js
+ * @author ZhiCheng Li <gccll.love@gmail.com>
+ * @license MIT
+ */
+import EVENT from '@commons/event'
+import keys from '@commons/keymaps/index'
+import goBack from '@commons/back'
+
+/**
+ * 当前页面的遥控器按键处理函数
+ * @param {Number} keycode 街搜到的键值
+ * @returns {Boolean} 键值是否往下流
+ */
+function keyHandler(keycode) {
+  switch (keycode) {
+    case keys.EPG_KEY_BACK:
+      goBack()
+      break
+    default:
+      break
+  }
+
+  return false
+}
+
+// listen events
+function listen() {
+  EVENT.addListener({ callback: keyHandler })
+}
+
+export default {
+  listen
+}

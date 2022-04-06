@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: draw-svg
+# key: draw-svg
+# --
+#+begin_src dot :file ../../static/img/tmp/$1.svg
+digraph G{
+    rankdir=LR;
+	size = "6, 4";//图片大小
+	node[shape = box, style = filled, color = ".7.3 1.0"];//一个node的属性
+    render2,render1[shape=circle,fillcolor=red]
+    $2 
+}
+#+end_src

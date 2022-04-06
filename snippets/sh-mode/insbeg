@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: install-file-start
+# key: insbeg
+# --
+color_info "> 开始执行 install-$1.sh 脚本"

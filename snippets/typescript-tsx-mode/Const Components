@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: const export default
+# key: cc
+# --
+export interface I$1Props {}
+
+const ${1:Name} = (props: I$1Props) => {
+      return (
+        <>
+            $0
+        </>
+      )
+}
+
+export default $1

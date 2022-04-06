@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: 1cid
+# key: 1cid
+# condition: t
+# --
+:PROPERTIES:
+:COLUMNS: %CUSTOM_ID[(Custom Id)]
+:CUSTOM_ID: $1
+:END:

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: imp-text-btn
+# key: itbtn
+# --
+import GlTextButton from '@/components/buttons/GlTextButton'

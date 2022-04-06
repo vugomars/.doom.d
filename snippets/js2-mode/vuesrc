@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: vuepkg
+# key: vuepkg
+# --
+https://github.com/vuejs/vue-next/tree/master/packages

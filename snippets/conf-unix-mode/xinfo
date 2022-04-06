@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: xinfo
+# key: xinfo
+# --
+alias $1info='echo -e "=== alias $1 ===
+-- $2
+
+   $3      = $4
+"'

@@ -1,0 +1,34 @@
+# -*- mode: snippet -*-
+# name: epg-release-tmpl
+# key: releasetmpl
+# --
+* $1
+
+*发布时间*: `(current-time-string)`
+
+*发布人*: 李志诚 (若子版本号非同一人请注明\*)
+
+*关联模块*: $2
+
+*版本说明*: $3
+
+*发布原因*: -
+
+@@html:<font color="red" bold>注意事项</font>@@： _有则写，且用@@html:<font color="red">红色字体</font>@@来表示；没有则不用写_
+
+$4
+
+** $5
+
+*更新日期*: `(current-time-string)`
+
+*版本包路径*:
+
+@@html:<font color="blue">/usr/local/pkgs/EPG/EPG30/H5EPG30_$6</font>@@
+
+*遗留问题*: _描述遗留的未修复的问题，如果没有则不用写_
+
+*新增功能*: \*逐条罗列新增功能，如果没有则不用写
+
+*修复列表*: -
+$7

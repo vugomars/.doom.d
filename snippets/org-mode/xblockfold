@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: xblockfold
+# key: xblockfold
+# --
+#+html: <br>
+#+begin_details $1
+$2
+#+end_details

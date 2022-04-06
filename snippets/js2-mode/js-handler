@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: js-handler
+# key: js-handler
+# --
+import keys from '@commons/keymaps/'
+import EVENT from '@commons/event'
+import goBack from '@commons/back'
+
+function keyHandler(keycode) {
+  console.log(keycode, 'key')
+  switch (keycode) {
+    case keys.EPG_KEY_BACK:
+      goBack()
+      break
+  }
+}
+
+// listen events
+function listen() {
+  EVENT.addListener({ callback: keyHandler })
+}
+
+export default {
+  listen
+}

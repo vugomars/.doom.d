@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: useState
+# key: uS
+# --
+const [$1,set$1] = useState($0)

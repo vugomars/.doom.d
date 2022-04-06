@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: bg-font
+# key: bg-font
+# --
+@@html:<font color="$1" style="background:$2;padding:0 5px;">@@$3@@html:</font>@@

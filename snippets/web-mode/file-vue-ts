@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: file-vue-ts
+# key: vuefile
+# --
+<template>
+$1
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+$2
+
+export default defineComponent({
+  name: '$3',
+  setup() {}
+})
+</script>
+<style lang="scss" scoped>
+$4
+</style>

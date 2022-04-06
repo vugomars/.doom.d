@@ -1,0 +1,13 @@
+# key: rrfc
+# name: react-reach-function-component
+# --
+import { RouteComponentProps } from '@reach/router'
+import React from 'react'
+
+const $1: React.FC<RouteComponentProps> = (props) => {
+  return (
+    <div>$2</div>
+  )
+}
+
+export default $1

@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: org-vuex
+# key: org-vuex
+# --
+#+begin_export html
+<div id="$1"></div>
+<script type="module">
+import * as vuex from '/js/vue/vuex.js'
+var Counter = {
+  template: `<div>testing...</div>`
+}
+var app = Vue.createApp(Counter)
+app.mount('#$1')
+</script>
+#+end_export

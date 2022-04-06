@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ifcmd
+# key: ifcmd
+# --
+if ! [ -x "$(command -v $1)" ]; then
+   $2
+fi

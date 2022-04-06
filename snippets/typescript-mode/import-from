@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: import-from
+# key: 1imp
+# --
+import $2 from '$1'

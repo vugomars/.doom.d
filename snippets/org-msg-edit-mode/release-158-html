@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: release-158-html
+# key: html158
+# --
+http://192.168.88.158/lzc/cms_release.html#$1

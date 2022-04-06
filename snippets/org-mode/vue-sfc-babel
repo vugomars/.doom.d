@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# name: vue-sfc-babel
+# key: vuesfcb
+# --
+const url =
+  process.env.VNEXT_PKG_RC + "/../compiler-sfc/dist/compiler-sfc.cjs.js";
+const value = require(url.replace("stb-", ""));
+const parser = '/usr/local/lib/node_modules/@babel/parser/lib'
+const { parse: babelParse } = require(parser)
+const { compileScript, parse } = value;
+
+const src = `<script setup>$1
+      import { defineProps, defineEmits, ref } from 'vue'
+      defineProps(['foo'])
+      defineEmits(['bar'])
+      const r = ref(0)
+      </script>`
+const { descriptor } = parse(src)
+const code = compileScript(descriptor, { id: 'xxxxx' }).content
+console.log('before babel > \n', code);
+babelParse(code, {
+  sourceType: 'module',
+  plugins: ['bigInt', 'optionalChaining', 'nullishCoalescingOperator', 'typescript']
+})
+
+console.log('after babel > \n', code);
+return 0;

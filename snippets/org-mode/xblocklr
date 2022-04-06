@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: xblocklr
+# key: xblocklr
+# --
+#+html: <br>
+#+begin_org-demo
+$1
+/italics/ and _underline_
+
+$e^{i \times \pi} + 1 = 0$
+#+end_org-demo

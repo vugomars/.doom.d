@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: release-notes-url
+# key: noteurl
+# --
+Release Notes: http://192.168.88.158/lzc/release.html#$1

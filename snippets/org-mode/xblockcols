@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: xblockcols
+# key: xblockcols
+# --
+#+begin_parallel $1 :bar yes-or-any-other-text
+
+$2
+
+#+columnbreak:
+
+$3
+
+#+columnbreak:
+
+$4
+
+#+end_parallel

@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: Export Default function component
+# key: efc
+# --
+
+interface I$1Props {}
+
+$1.defaultProps = {}
+
+export default function ${1:Name} (props: I$1Props) {
+       return (
+            <>
+               $0
+            </>
+       )
+}

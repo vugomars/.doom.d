@@ -1,0 +1,10 @@
+# key: vuecjsrea
+# name: vue-reactivity
+# --
+const url = process.env.VNEXT_PKG_RC +'/../reactivity/dist/reactivity.cjs.js'
+const value = require(url.replace('stb-', ''))
+const { reactive, effect } = value
+
+$1
+
+return 0

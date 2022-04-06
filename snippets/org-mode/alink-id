@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: alink-id
+# key: alinkid
+# --
+@@html:<a href="#$1">:link: $2</a>@@

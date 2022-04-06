@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: xdoc
+# key: xdoc
+# --
+doc:$1

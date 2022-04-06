@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sunlight-lib
+# key: slib
+# --
+import { $1 } from '@commons/sunlight/lib'

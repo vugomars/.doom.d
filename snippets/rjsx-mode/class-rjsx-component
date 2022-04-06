@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: class-rjsx-component
+# key: clscomp
+# --
+import { register } from '../utils'
+import { dom } from '../$2sunlight/lib'
+
+class $1 {
+  name = '$1'
+
+  constructor(option) {
+    this.option = Object.assign({}, option)
+
+    $3
+    register.fns()
+  }
+}
+
+export default $1

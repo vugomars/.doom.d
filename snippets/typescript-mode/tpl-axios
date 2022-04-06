@@ -1,0 +1,78 @@
+# -*- mode: snippet -*-
+# name: tpl-axios
+# key: tpl-axios
+# --
+import axios from 'axios'
+import { Message, MessageBox } from 'element-ui'
+
+export interface AjaxResponse<T> {
+  code: number
+  data: T
+  message: string
+}
+
+function handleExpire() {
+  MessageBox.confirm('登录过期，请重新登录！', '提示', {
+    confirmButtonText: '确定',
+    showCancelButton: false,
+    type: 'warning',
+  }).finally(() => {
+    // TODO $1 口令过期处理
+    // window.localStorage.clear()
+    // window.location.reload()
+  })
+}
+
+let messageInstance: any = null
+const axiosInstance = axios.create({
+  // TODO $2 基础配置
+  baseURL: process.env.NODE_ENV === 'development' ? '/proxy' : '/cms/api',
+  method: 'post',
+  timeout: 10 * 60 * 1000,
+  data: {},
+})
+
+axiosInstance.interceptors.request.use(config => {
+  // TODO $3 login info cache
+  const loginInfo = localStorage['loginInfo']
+    ? JSON.parse(localStorage['loginInfo'])
+    : {}
+  config.headers = {
+    Authorization: loginInfo.authorization || '',
+  }
+  return config
+})
+
+axiosInstance.interceptors.response.use(
+  response => {
+    const data = response.data
+
+    // TODO $4 响应错误处理
+    if (response.status > 500) {
+      if (messageInstance) {
+        messageInstance.close()
+      }
+      messageInstance = Message({ type: 'error', message: '服务器异常' })
+    }
+
+    if (data.code !== 200) {
+      if (data.code === 5) {
+        handleExpire()
+      } else {
+        if (messageInstance) {
+          messageInstance.close()
+        }
+        messageInstance = Message({ type: 'error', message: data.message })
+      }
+    }
+    return data
+  },
+  error => {
+    Message({ message: error.message, type: 'error' })
+
+    return Promise.reject(error)
+  },
+)
+
+// axiosInstance({ url, data, method })
+export default axiosInstance

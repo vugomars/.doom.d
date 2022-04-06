@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: hugo-head
+# key: hugohd
+# --
+#+TITLE: $1
+#+DATE: <`(format-time-string "%Y-%m-%d %T")`>
+#+EMAIL: Lee ZhiCheng<`user-mail-address`>
+#+TAGS[]: $2
+#+CATEGORIES[]: $3
+#+LANGUAGE: zh-cn
+#+STARTUP: indent

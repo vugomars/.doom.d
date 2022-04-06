@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: js-api-sum
+# key: jsapisum
+# --
+本文详细介绍了 $1 相关的知识，从伪码实现的角度去学习数组 API 使用和实现步骤。
