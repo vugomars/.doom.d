@@ -323,7 +323,7 @@ Keybindings reference:
  ;; avy
  :nv    "F"     #'avy-goto-char-2
  :nv    "f"     #'avy-goto-char
- :nv    "w"     #'avy-goto-word-1
+ :nv    "w"     #'evil-avy-goto-char-timer
  :nv    "W"     #'avy-goto-word-0
 
  :nv    "-"     #'evil-window-decrease-width
