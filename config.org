@@ -20,6 +20,11 @@
   (find-file "~/.zshrc"))
 
 ;;;###autoload
+(defun dqv/edit-todo ()
+  (interactive)
+  (find-file "~/.dqvrc/org/todo.org"))
+
+;;;###autoload
 (defun dqv/use-eslint-from-node-modules ()
     "Set local eslint if available."
     (let* ((root (locate-dominating-file
@@ -215,12 +220,11 @@ t means output to buffer."
 :END:
 ** Theme Config
 #+begin_src emacs-lisp
-(setq doom-font (font-spec :family "Fira Code Retina" :size 17 :weight 'light)
-      doom-variable-pitch-font (font-spec :family "Roboto Mono" :style "Regular" :size 14 :weight 'regular))
-;; (setq doom-theme 'spacemacs-light)
-(setq doom-theme 'doom-dracula)
+(setq doom-font (font-spec :family "Fira Code Retina" :size 18 :weight 'light)
+      doom-variable-pitch-font (font-spec :family "Roboto Mono" :style "Regular" :size 15 :weight 'regular))
+;; (setq doom-theme 'afternoon)
+(load-theme 'afternoon t)
 #+end_src
-
 ** Org-mode visual
 #+begin_src emacs-lisp
 (defun dqv/org-mode-visual-fill ()
@@ -316,15 +320,14 @@ Keybindings reference:
 #+end_src
 
 ** Common
-
 #+begin_src emacs-lisp
 (setq doom-localleader-key ",")
 (map!
  ;; avy
  :nv    "F"     #'avy-goto-char-2
- :nv    "f"     #'avy-goto-char
- :nv    "w"     #'evil-avy-goto-char-timer
- :nv    "W"     #'avy-goto-word-0
+ :nv    "f"     #'avy-goto-char-timer
+ :nv    "w"     #'avy-goto-word-1
+ :nv    "W"     #'avy-goto-char-timer
 
  :nv    "-"     #'evil-window-decrease-width
  :nv    "+"     #'evil-window-increase-width
@@ -394,8 +397,11 @@ Keybindings reference:
       (:prefix ("d" . "Dir&Deletion")
        :n    "d"    #'deft)
 
-      (:prefix ("e" . "Edit&Errors")
-       ;; :n    "l"     #'lsp-treemacs-errors-list
+      (:prefix ("e" . "Exercise Coding Challenger")
+       :n    "l"     #'leetcode
+       :n    "d"     #'leetcode-daily
+       :n    "o"     #'leetcode-show-problem-in-browser
+       :n    "s"     #'leetcode-show-problem
        )
 
 
@@ -501,13 +507,6 @@ Keybindings reference:
       "C-c n b c" #'org-bibtex-check-all
       "C-c n b a" #'org-bibtex-create
       )
-#+end_src
-
-** quick-find
-#+begin_src emacs-lisp
-(quick-find "C-h C-x C-s" "~/.ssh/config")
-(quick-find "C-h C-x C-z" "~/.zshrc")
-(quick-find "C-h C-x C-c" "~/.doom.d/config.org")
 #+end_src
 
 * Package Settings
@@ -1080,7 +1079,7 @@ Doom Emacs default configuration is too slow, let’s speed it up.
    org-src-preserve-indentation t
    org-edit-src-content-indentation 0
    org-todo-keywords
-   '((sequence "TODO(t)" "PROJECT(p)" "NEXT(n)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "SOMEDAY(s)" "MAYBE(m)" "|" "DONE(d)" "CANCELLED(c)")
+   '((sequence "TODO(t)" "PROJECT(p)" "NEXT(n)" "WAIT(w)" "READ(r)" "IDEA(i)" "SOMEDAY(s)" "MAYBE(m)" "|" "DONE(d)" "CANCELLED(c)")
      (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")
      ;; (sequence "|" "OKAY(o)" "YES(y)" "NO(x)")
      )
@@ -1091,7 +1090,7 @@ Doom Emacs default configuration is too slow, let’s speed it up.
                             ("TODO" . ,(doom-color 'yellow))
                             ("PROJECT" . ,(doom-color 'tan))
                             ("WAIT" . ,(doom-color 'teal))
-                            ("HOLD" . ,(doom-color 'red))
+                            ("READ" . ,(doom-color 'red))
                             ("IDEA" . ,(doom-color 'tomato))
                             ("SOMEDAY" . ,(doom-color 'base7))
                             ("MAYBE" . ,(doom-color 'base5))
@@ -1360,7 +1359,6 @@ Doom Emacs default configuration is too slow, let’s speed it up.
 #+end_src
 
 ** org-pretty-capture
-
 #+begin_src emacs-lisp
 (defun org-capture-select-template-prettier (&optional keys)
   "Select a capture template, in a prettier way than default
@@ -1473,7 +1471,6 @@ is selected, only the bare key is returned."
 #+end_src
 
 ** org-capture
-
 #+begin_src emacs-lisp
 (use-package! doct
   :commands (doct))

@@ -1,5 +1,5 @@
 ;; funny
-
+(package! afternoon-theme)
 (package! org-krita
   :recipe (:host github
            :repo "lepisma/org-krita"

@@ -4,6 +4,11 @@
   (find-file "~/.zshrc"))
 
 ;;;###autoload
+(defun dqv/edit-todo ()
+  (interactive)
+  (find-file "~/.dqvrc/org/todo.org"))
+
+;;;###autoload
 (defun dqv/use-eslint-from-node-modules ()
     "Set local eslint if available."
     (let* ((root (locate-dominating-file
@@ -178,10 +183,10 @@ t means output to buffer."
          (find-file (expand-file-name ,file ,path)))))
     ))
 
-(setq doom-font (font-spec :family "Fira Code Retina" :size 17 :weight 'light)
-      doom-variable-pitch-font (font-spec :family "Roboto Mono" :style "Regular" :size 14 :weight 'regular))
-;; (setq doom-theme 'spacemacs-light)
-(setq doom-theme 'doom-dracula)
+(setq doom-font (font-spec :family "Fira Code Retina" :size 18 :weight 'light)
+      doom-variable-pitch-font (font-spec :family "Roboto Mono" :style "Regular" :size 15 :weight 'regular))
+;; (setq doom-theme 'afternoon)
+(load-theme 'afternoon t)
 
 (defun dqv/org-mode-visual-fill ()
   (setq visual-fill-column-width 120
@@ -258,9 +263,9 @@ t means output to buffer."
 (map!
  ;; avy
  :nv    "F"     #'avy-goto-char-2
- :nv    "f"     #'avy-goto-char
- :nv    "w"     #'evil-avy-goto-char-timer
- :nv    "W"     #'avy-goto-word-0
+ :nv    "f"     #'avy-goto-char-timer
+ :nv    "w"     #'avy-goto-word-1
+ :nv    "W"     #'avy-goto-char-timer
 
  :nv    "-"     #'evil-window-decrease-width
  :nv    "+"     #'evil-window-increase-width
@@ -326,8 +331,11 @@ t means output to buffer."
       (:prefix ("d" . "Dir&Deletion")
        :n    "d"    #'deft)
 
-      (:prefix ("e" . "Edit&Errors")
-       ;; :n    "l"     #'lsp-treemacs-errors-list
+      (:prefix ("e" . "Exercise Coding Challenger")
+       :n    "l"     #'leetcode
+       :n    "d"     #'leetcode-daily
+       :n    "o"     #'leetcode-show-problem-in-browser
+       :n    "s"     #'leetcode-show-problem
        )
 
 
@@ -430,10 +438,6 @@ t means output to buffer."
       "C-c n b c" #'org-bibtex-check-all
       "C-c n b a" #'org-bibtex-create
       )
-
-(quick-find "C-h C-x C-s" "~/.ssh/config")
-(quick-find "C-h C-x C-z" "~/.zshrc")
-(quick-find "C-h C-x C-c" "~/.doom.d/config.org")
 
 ;; (dolist (hook '(erc-mode-hook
  ;;                 emacs-lisp-mode-hook
@@ -884,7 +888,7 @@ t means output to buffer."
    org-src-preserve-indentation t
    org-edit-src-content-indentation 0
    org-todo-keywords
-   '((sequence "TODO(t)" "PROJECT(p)" "NEXT(n)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "SOMEDAY(s)" "MAYBE(m)" "|" "DONE(d)" "CANCELLED(c)")
+   '((sequence "TODO(t)" "PROJECT(p)" "NEXT(n)" "WAIT(w)" "READ(r)" "IDEA(i)" "SOMEDAY(s)" "MAYBE(m)" "|" "DONE(d)" "CANCELLED(c)")
      (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")
      ;; (sequence "|" "OKAY(o)" "YES(y)" "NO(x)")
      )
@@ -895,7 +899,7 @@ t means output to buffer."
                             ("TODO" . ,(doom-color 'yellow))
                             ("PROJECT" . ,(doom-color 'tan))
                             ("WAIT" . ,(doom-color 'teal))
-                            ("HOLD" . ,(doom-color 'red))
+                            ("READ" . ,(doom-color 'red))
                             ("IDEA" . ,(doom-color 'tomato))
                             ("SOMEDAY" . ,(doom-color 'base7))
                             ("MAYBE" . ,(doom-color 'base5))

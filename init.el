@@ -1,4 +1,4 @@
-;;; init.el -*- lexical-binding: t; -*-
+;;; init.el ;;; init.el -*- lexical-binding: t; -*-
 
 (doom! :input
        ;; chinese
