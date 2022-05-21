@@ -1,7 +1,7 @@
 ;;; init.el ;;; init.el -*- lexical-binding: t; -*-
 
 (doom! :input
-       ;; chinese
+       ;;chinese
        ;;japanese
        ;;layout            ; auie,ctsrnm is the superior home row
 
@@ -45,7 +45,7 @@
        :editor
        (evil             ; come to the dark side, we have cookies
         +everywhere)
-       file-templates    ; auto-snippets for empty files
+       ;;file-templates    ; auto-snippets for empty files
        fold              ; (nigh) universal code folding
        (format           ; automated prettiness
         +onsave)
@@ -73,13 +73,13 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       ;;(spell +flyspell) ; tasing you for misspelling mispelling
+       (spell +flyspell) ; tasing you for misspelling mispelling
        grammar           ; tasing grammar mistake every you make
 
        :tools
        ;;ansible
        ;;biblio            ; Writes a PhD for you (citation needed)
-       ;;debugger          ; FIXME stepping through code, to help you add bugs
+       debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        docker
        editorconfig        ; let someone else argue about tabs vs spaces
@@ -113,7 +113,7 @@
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
        ;;crystal           ; ruby at the speed of c
-       ;;csharp            ; unity, .NET, and mono shenanigans
+       csharp            ; unity, .NET, and mono shenanigans
        data                ; config/data formats
        ;;(dart +flutter)   ; paint ui and not much else
        ;;dhall
@@ -128,7 +128,7 @@
        ;;fsharp            ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
-       ;;(go +lsp)         ; the hipster dialect
+       (go +lsp)         ; the hipster dialect
        ;;(haskell +lsp)    ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ; a language you can depend on
@@ -186,7 +186,7 @@
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
        (web +lsp)          ; the tubes
-       (yaml +lsp)         ; JSON, but readable
+       ;;(yaml +lsp)         ; JSON, but readable
        ;;zig               ; C, but simpler
 
        :email

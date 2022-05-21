@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Option<Box<..>>
+# key: OB
+# --
+Option<Box<$0>>

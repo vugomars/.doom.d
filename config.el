@@ -4,11 +4,6 @@
   (find-file "~/.zshrc"))
 
 ;;;###autoload
-(defun dqv/edit-todo ()
-  (interactive)
-  (find-file "~/.dqvrc/org/todo.org"))
-
-;;;###autoload
 (defun dqv/use-eslint-from-node-modules ()
     "Set local eslint if available."
     (let* ((root (locate-dominating-file
@@ -184,9 +179,10 @@ t means output to buffer."
     ))
 
 (setq doom-font (font-spec :family "Fira Code Retina" :size 18 :weight 'light)
+      doom-unicode-font (font-spec :family "Fira Code Retina" :size 18 :weight 'light)
       doom-variable-pitch-font (font-spec :family "Roboto Mono" :style "Regular" :size 15 :weight 'regular))
-;; (setq doom-theme 'afternoon)
-(load-theme 'afternoon t)
+(setq doom-theme 'doom-dracula)
+;; (load-theme 'afternoon t)
 
 (defun dqv/org-mode-visual-fill ()
   (setq visual-fill-column-width 120
@@ -763,10 +759,11 @@ t means output to buffer."
        js-doc-license "MIT"))
 
 (after! leetcode
-  (setq leetcode-prefer-language "javascript"
+  (setq leetcode-prefer-language "rust"
         leetcode-prefer-sql "mysql"
         leetcode-save-solutions t
-        leetcode-directory "~/github/mine/make-leetcode"))
+        leetcode-directory "~/github/vugomars/make-leetcode")
+  )
 
 (setq auto-insert 'other
       auto-insert-query nil
@@ -920,6 +917,7 @@ t means output to buffer."
 ;; [[file:config.org::*org-roam-ui][org-roam-ui:1]]
 (use-package! websocket
   :after org-roam)
+
 (use-package! org-roam-ui
   :after org-roam
   :config
@@ -1337,7 +1335,7 @@ is selected, only the bare key is returned."
                                ))
                    )
                   ("Interesting" :keys "i"
-                   :icon ("eye" :set "faicon" :color "lcyan")
+                   :icon ("eye" :set "faicon" :color "cyan")
                    :file +org-capture-todo-file
                    :prepend t
                    :headline "Interesting"
@@ -1375,6 +1373,20 @@ is selected, only the bare key is returned."
                                :desc ""
                                :i-type "idea"
                                )))
+
+                  ("Vocabulary" :keys "v"
+                   :icon ("inbox" :set "octicon" :color "green")
+                   :file +org-capture-todo-file
+                   :prepend t
+                   :headline "Vocabulary"
+                   :type entry
+                   :template ("* [ ] %? %^G%{extra}"
+                              "%i %a")
+                   :children (("General" :keys "v"
+                               :icon ("inbox" :set "octicon" :color "green")
+                               :extra ""
+                               )
+                              ))
                   ("Tasks" :keys "k"
                    :icon ("inbox" :set "octicon" :color "yellow")
                    :file +org-capture-todo-file
@@ -1406,14 +1418,15 @@ is selected, only the bare key is returned."
                               "%a")
                    :file ""
                    :custom (:time-or-todo "")
-                   :children (("Project-local todo" :keys "t"
+                   :children (("Project-local sprint" :keys "t"
                                :icon ("checklist" :set "octicon" :color "green")
                                :time-or-todo "TODO"
                                :file +org-capture-project-todo-file)
-                              ("Project-local note" :keys "n"
+                              ("Project-local userStories" :keys "n"
                                :icon ("sticky-note" :set "faicon" :color "yellow")
                                :time-or-todo "%U"
-                               :file +org-capture-project-notes-file)
+                               :heading "UserStories"
+                               :file +org-capture-project-todo-file)
                               ("Project-local changelog" :keys "c"
                                :icon ("list" :set "faicon" :color "blue")
                                :time-or-todo "%U"

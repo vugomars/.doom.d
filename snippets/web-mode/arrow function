@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: arrow function
-# key: fn
+# name: Arrow Function
+# key: af
 # --
 ($1) => {$0}
