@@ -2011,6 +2011,30 @@ is selected, only the bare key is returned."
       (setq-local buffer-save-without-query t)))
 #+end_src
 
+** Debugger
+*** dap-Mode
+#+begin_src emacs-lisp
+;; Enabling only some features
+(setq dap-auto-configure-features '(sessions locals controls tooltip))
+#+end_src
+
+*** Javascript
+#+begin_src emacs-lisp
+(require 'dap-chrome)
+#+end_src
+
+*** Rust
+#+begin_src emacs-lisp
+(require 'dap-gdb-lldb)
+(dap-register-debug-template "Rust::GDB Run Configuration"
+                             (list :type "gdb"
+                                   :request "launch"
+                                   :name "GDB::Run"
+                           :gdbpath "rust-gdb"
+                                   :target nil
+                                   :cwd nil))
+#+end_src
+
 * Key Table
 
 | Key           | Function                         |

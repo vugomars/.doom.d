@@ -1,7 +1,7 @@
 ;;; init.el ;;; init.el -*- lexical-binding: t; -*-
 
 (doom! :input
-       ;;chinese
+       chinese
        ;;japanese
        ;;layout            ; auie,ctsrnm is the superior home row
 
@@ -9,14 +9,14 @@
        company           ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
-       ;;ivy               ; a search engine for love and life
-       vertico           ; the search engine of the future
+       ivy               ; a search engine for love and life
+       ;; vertico           ; the search engine of the future
 
        :ui
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
-       ;; doom-dashboard    ; a nifty splash screen for Emacs
-       ;; doom-quit         ; DOOM quit-message prompts when you quit Emacs
+       doom-dashboard    ; a nifty splash screen for Emacs
+       doom-quit         ; DOOM quit-message prompts when you quit Emacs
        (emoji
         +unicode
         +ascii
@@ -26,8 +26,7 @@
        ;; indent-guides     ; highlighted indent columns
        (ligatures +extra)  ; ligatures and symbols to make your code pretty again
        ;;minimap           ; show a map of the code on the side
-       modeline            ; snazzy, Atom-inspired modeline, plus API
-       nav-flash           ; blink cursor line after big motions
+       modeline            ; snazzy, Atom-inspired
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints             ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
@@ -79,7 +78,7 @@
        :tools
        ;;ansible
        ;;biblio            ; Writes a PhD for you (citation needed)
-       debugger          ; FIXME stepping through code, to help you add bugs
+       (debugger +lsp)          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        docker
        editorconfig        ; let someone else argue about tabs vs spaces
@@ -113,7 +112,7 @@
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
        ;;crystal           ; ruby at the speed of c
-       csharp            ; unity, .NET, and mono shenanigans
+       ;;csharp            ; unity, .NET, and mono shenanigans
        data                ; config/data formats
        ;;(dart +flutter)   ; paint ui and not much else
        ;;dhall

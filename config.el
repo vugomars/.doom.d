@@ -1721,3 +1721,17 @@ is selected, only the bare key is returned."
     ;; no longer be necessary.
     (when buffer-file-name
       (setq-local buffer-save-without-query t)))
+
+;; Enabling only some features
+(setq dap-auto-configure-features '(sessions locals controls tooltip))
+
+(require 'dap-chrome)
+
+(require 'dap-gdb-lldb)
+(dap-register-debug-template "Rust::GDB Run Configuration"
+                             (list :type "gdb"
+                                   :request "launch"
+                                   :name "GDB::Run"
+                           :gdbpath "rust-gdb"
+                                   :target nil
+                                   :cwd nil))
