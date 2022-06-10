@@ -185,7 +185,7 @@ t means output to buffer."
 ;; (load-theme 'afternoon t)
 
 (defun dqv/org-mode-visual-fill ()
-  (setq visual-fill-column-width 120
+  (setq visual-fill-column-width 140
         visual-fill-column-center-text t
         )
   (visual-fill-column-mode 1)
@@ -324,8 +324,16 @@ t means output to buffer."
 
 (map! :leader
       :n "SPC"  #'execute-extended-command
-      (:prefix ("d" . "Dir&Deletion")
-       :n    "d"    #'deft)
+      (:prefix ("d" . "Debugger")
+       :n    "r"   #'dap-debug
+       :n    "l"   #'dap-debug-last
+       :n    "R"   #'dap-debug-recent
+       :n    "x"   #'dap-disconnect
+       :n    "a"   #'dap-breakpoint-add
+       :n    "t"   #'dap-breakpoint-toggle
+       :n    "d"   #'dap-delete-session
+       :n    "D"   #'dap-delete-all-sessions
+       )
 
       (:prefix ("e" . "Exercise Coding Challenger")
        :n    "l"     #'leetcode
@@ -355,6 +363,7 @@ t means output to buffer."
       :nv "ls" #'+lsp/switch-client
       :nv "bR" #'rename-buffer
 
+      :nv "bx" #'doom/switch-to-scratch-buffer
       )
 
 (map! :map org-mode-map
